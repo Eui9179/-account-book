@@ -1,2 +1,2 @@
-# account-book
+# money tracker
  It was developed using react.
