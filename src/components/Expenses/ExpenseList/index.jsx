@@ -14,7 +14,7 @@ const index = () => {
       <ExpenseItem
         description={'Note'}
         price={3500}
-        date={new Date(2022, 5, 29)}
+        date={new Date(2022, 3, 29)}
       />
     </Card>
   );
