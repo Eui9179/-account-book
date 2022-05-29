@@ -4,11 +4,13 @@ import NewExpense from './components/NewExpense/NewExpense';
 
 const DUMMY_EXPENSES = [
   {
+    id: Math.random().toString(),
     title: 'Book',
     amount: 35000,
     date: new Date(2022, 5, 28),
   },
   {
+    id: Math.random().toString(),
     title: 'Note',
     amount: 2300,
     date: new Date(2022, 3, 1),

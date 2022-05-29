@@ -10,7 +10,6 @@ const NewExpense = (props) => {
     };
 
     props.onAddExpense(expenseDate);
-    
   };
   // ExpenseForm 에서 사용할 함수를 props로 넘김
 
