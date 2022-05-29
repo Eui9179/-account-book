@@ -1,11 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ExpenseItem from '../ExpenseItem';
+import ExpenseFilter from '../../ExpenseFilter/ExpenseFilter';
 import Card from '../../UI/Card';
 import style from './ExpenseList.module.css';
 
 const ExpenseList = (props) => {
+  const [filter, setFilter] = useState('2022');
+
+  const setYear = (year) => {
+    setFilter(year);
+  };
+
+  console.log(filter);
+
   return (
     <Card className={style.expense_list}>
+      <ExpenseFilter onSeleteYear={setYear} />
       {props.expenseList.map((expense) => (
         <ExpenseItem
           key={expense.id}

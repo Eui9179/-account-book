@@ -1,0 +1,17 @@
+.filter_year{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+select {
+  border-radius: 5px;
+  padding: 5px;
+  height: 30px;
+  width: 90px;
+}
+
+.filter_label {
+  font-size: 1.3rem;
+  font-weight: bold;
+}

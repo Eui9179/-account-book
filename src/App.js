@@ -1,13 +1,21 @@
 import { useState } from 'react';
-import ExpenseList from './components/Expense/ExpenseList';
+import ExpenseList from './components/Expense/Expense';
 import NewExpense from './components/NewExpense/NewExpense';
+import ExpenseFIlter from './components/ExpenseFilter/ExpenseFilter';
 
 function App() {
   const [expenseList, setExpenseList] = useState([]);
+  const [filter, setFilter] = useState('');
 
   const addExpenseHandler = (enteredExpenseDate) => {
     setExpenseList((prev) => [enteredExpenseDate, ...prev]);
   };
+
+  const filterHandler = (filer)=> {
+    setFilter(filter);
+  }
+
+
 
   return (
     <div>
