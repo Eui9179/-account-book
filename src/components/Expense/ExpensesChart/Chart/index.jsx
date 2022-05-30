@@ -1,6 +1,8 @@
 import React from 'react';
-import Chart from '../../Chart/Chart';
-const ExpensesChart = (props) => {
+import ChartBar from '../ChartBar'
+import style from './Chart.module.css';
+
+const Chart = (props) => {
   const chartDataPoints = [
     { label: 'Jan', value: 0 },
     { label: 'Feb', value: 0 },
@@ -20,8 +22,20 @@ const ExpensesChart = (props) => {
     const expenseMonth = expense.date.getMonth();
     chartDataPoints[expenseMonth].value += expense.amount;
   }
+  const maxValue = Math.max(...chartDataPoints.map((x) => x.value));
 
-  return <Chart dataPoints={chartDataPoints} />;
+  return (
+    <div className={style.chart}>
+      {chartDataPoints.map((dataPoint) => (
+        <ChartBar
+          key={dataPoint.label}
+          value={dataPoint.value}
+          maxValue={maxValue}
+          label={dataPoint.label}
+        />
+      ))}
+    </div>
+  );
 };
 
-export default ExpensesChart;
+export default Chart;
