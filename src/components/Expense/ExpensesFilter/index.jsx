@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyledFilterYear, StyledSelect, StyledFilterLabel } from './styles';
-import style from './ExpensesFilter.module.css';
 
 const ExpensesFilter = (props) => {
   const dropdownChangeHandler = (event) => {

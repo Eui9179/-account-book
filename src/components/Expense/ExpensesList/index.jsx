@@ -1,7 +1,6 @@
 import React from 'react';
 import ExpenseItem from '../ExpenseItem';
 import { StyledExpensesLissFallback, StyledExpenseList } from './styles';
-import style from './ExpensesList.module.css';
 
 const ExpensesList = (props) => {
   const { expenses } = props;
