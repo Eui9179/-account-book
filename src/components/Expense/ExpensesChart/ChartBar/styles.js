@@ -10,7 +10,7 @@ const StyledChartBar = styled.div`
 const StyledChartInner = styled.div`
   height: 100%;
   width: 15px;
-  border: 1px solid #ffffff9a;
+  border: 0.5px solid #ffffff;
   border-radius: 12px;
   background-color: #ffffff;
   overflow: hidden;
@@ -34,4 +34,9 @@ const StyledChartBarLabel = styled.div`
   color: azure;
 `;
 
-export { StyledChartBar, StyledChartInner, StyledChartBarFill, StyledChartBarLabel };
+export {
+  StyledChartBar,
+  StyledChartInner,
+  StyledChartBarFill,
+  StyledChartBarLabel,
+};

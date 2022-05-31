@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Card from '../../UI/Card';
 
-const StyledYearText = styled.text`
+const StyledYearText = styled.div`
   font-size: 0.8rem;
 `;
 
@@ -21,14 +21,13 @@ const StyledCardDetail = styled(Card)`
   margin-left: 3px;
 `;
 
-const StyledMonthText = styled.text`
+const StyledMonthText = styled.div`
   font-weight: bold;
 `;
 
-const StyledDayText = styled.text`
+const StyledDayText = styled.div`
   font-size: 1.5rem;
   padding-bottom: 3px;
 `;
 
-
-export {StyledYearText, StyledCardDetail, StyledMonthText, StyledDayText}
+export { StyledYearText, StyledCardDetail, StyledMonthText, StyledDayText };

@@ -21,6 +21,7 @@ const StyledNewExpenseInput = styled.input`
   width: 20rem;
   max-width: 100%;
   height: 1.5rem;
+  font: inherit;
 `;
 
 const StyledButton = styled.button`
@@ -28,7 +29,6 @@ const StyledButton = styled.button`
   border: 1px solid #4b57ff;
   border-radius: 12px;
   color: white;
-  padding: 1rem 2rem;
   padding: 1rem 2rem;
   border-radius: 12px;
   font-size: 1rem;

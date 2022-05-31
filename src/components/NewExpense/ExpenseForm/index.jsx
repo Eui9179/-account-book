@@ -10,7 +10,6 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
-  const [open, setOpen] = useState(true);
 
   // form에 대한 state를 한번에 관리
   // 객체에 저장
@@ -53,11 +52,7 @@ const ExpenseForm = (props) => {
     setEnteredDate('');
   };
 
-  const openHandler = () => {
-    setOpen((prev) => (prev ? false : true));
-  };
-
-  return open ? (
+  return (
     <form onSubmit={submitHandler}>
       <StyledNewExpenseControls>
         <div>
@@ -89,14 +84,11 @@ const ExpenseForm = (props) => {
           />
         </div>
       </StyledNewExpenseControls>
-
-      <StyledButton type='button' onClick={openHandler}>
-        Close
+      <StyledButton type='button' onClick={props.onCancel}>
+        Cancel
       </StyledButton>
       <StyledButton type='submit'>Add Expense</StyledButton>
     </form>
-  ) : (
-    <StyledButton onClick={openHandler}>Add New Expense</StyledButton>
   );
 };
 
