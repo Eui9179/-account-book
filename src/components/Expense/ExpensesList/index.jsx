@@ -1,16 +1,21 @@
 import React from 'react';
 import ExpenseItem from '../ExpenseItem';
+import { StyledExpensesLissFallback, StyledExpenseList } from './styles';
 import style from './ExpensesList.module.css';
 
 const ExpensesList = (props) => {
   const { expenses } = props;
 
   if (expenses.length === 0) {
-    return <p className={style.expenses_list__fallback}>No expenses found.</p>;
+    return (
+      <StyledExpensesLissFallback>
+        No expenses found.
+      </StyledExpensesLissFallback>
+    );
   }
 
   return (
-    <ul className={style.expenses_list}>
+    <StyledExpenseList>
       {expenses.map((expense) => {
         return (
           <ExpenseItem
@@ -21,7 +26,7 @@ const ExpensesList = (props) => {
           />
         );
       })}
-    </ul>
+    </StyledExpenseList>
   );
 };
 

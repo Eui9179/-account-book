@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import style from './ExpenseForm.module.css';
+import {
+  StyledNewExpenseControls,
+  StyledNewExpenseLabel,
+  StyledNewExpenseInput,
+  StyledButton,
+} from './styles';
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -54,18 +59,18 @@ const ExpenseForm = (props) => {
 
   return open ? (
     <form onSubmit={submitHandler}>
-      <div className={style.new_expense__controls}>
-        <div className={style.new_expense__control}>
-          <label>Title</label>
-          <input
+      <StyledNewExpenseControls>
+        <div>
+          <StyledNewExpenseLabel>Title</StyledNewExpenseLabel>
+          <StyledNewExpenseInput
             type='text'
             value={enteredTitle}
             onChange={titleChangeHandler}
           />
         </div>
-        <div className={style.new_expense__control}>
-          <label>Amount</label>
-          <input
+        <div>
+          <StyledNewExpenseLabel>Amount</StyledNewExpenseLabel>
+          <StyledNewExpenseInput
             type='number'
             min='10'
             step='10'
@@ -73,9 +78,9 @@ const ExpenseForm = (props) => {
             onChange={amountChangeHandler}
           />
         </div>
-        <div className={style.new_expense__control}>
-          <label>Date</label>
-          <input
+        <div>
+          <StyledNewExpenseLabel>Date</StyledNewExpenseLabel>
+          <StyledNewExpenseInput
             type='date'
             min='2019-01-01'
             max='2022-12-31'
@@ -83,18 +88,15 @@ const ExpenseForm = (props) => {
             onChange={dateChangeHandler}
           />
         </div>
-      </div>
-      <div className={style.new_expense__actions}>
-        <button type='button' onClick={openHandler}>
-          Close
-        </button>
-        <button type='submit'>Add Expense</button>
-      </div>
+      </StyledNewExpenseControls>
+
+      <StyledButton type='button' onClick={openHandler}>
+        Close
+      </StyledButton>
+      <StyledButton type='submit'>Add Expense</StyledButton>
     </form>
   ) : (
-    <button className={style.add_new_expense} onClick={openHandler}>
-      Add New Expense
-    </button>
+    <StyledButton onClick={openHandler}>Add New Expense</StyledButton>
   );
 };
 

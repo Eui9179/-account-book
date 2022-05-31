@@ -1,17 +1,17 @@
 import React from 'react';
+import { StyledFilterYear, StyledSelect, StyledFilterLabel } from './styles';
 import style from './ExpensesFilter.module.css';
 
 const ExpensesFilter = (props) => {
-  
   const dropdownChangeHandler = (event) => {
     props.onChangeFilter(event.target.value);
   };
 
   return (
     <div>
-      <div className={style.filter_year}>
-        <label className={style.filter_label}>Filter by year</label>
-        <select
+      <StyledFilterYear>
+        <StyledFilterLabel>Filter by year</StyledFilterLabel>
+        <StyledSelect
           id='year_select'
           onChange={dropdownChangeHandler}
           value={props.selected}
@@ -20,8 +20,8 @@ const ExpensesFilter = (props) => {
           <option value={2020}>2020</option>
           <option value={2021}>2021</option>
           <option value={2022}>2022</option>
-        </select>
-      </div>
+        </StyledSelect>
+      </StyledFilterYear>
     </div>
   );
 };

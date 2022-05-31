@@ -1,16 +1,15 @@
 import React from 'react';
 import ExpenseDate from '../ExpenseDate';
-import Card from '../../UI/Card';
-import style from './ExpenseItem.module.css';
+import { StyledExpenseItem, StyledTitle, StyledAmount } from './styles';
 
 const ExpenseItem = (props) => {
   return (
     <li>
-      <Card className={style.expense_item}>
+      <StyledExpenseItem>
         <ExpenseDate date={props.date} />
-        <h2 className={style.expense_title}>{props.title}</h2>
-        <Card className={style.expense_amount}>{props.amount} ₩</Card>
-      </Card>
+        <StyledTitle>{props.title}</StyledTitle>
+        <StyledAmount>{props.amount} ₩</StyledAmount>
+      </StyledExpenseItem>
     </li>
   );
 };

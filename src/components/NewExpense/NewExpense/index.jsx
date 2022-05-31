@@ -1,6 +1,6 @@
 import React from 'react';
 import ExpenseForm from '../ExpenseForm';
-import style from './NewExpense.module.css';
+import { StyledNewExpense } from './styles';
 
 const NewExpense = (props) => {
   const saveExpenseDateHandler = (enteredExpenseDate) => {
@@ -14,9 +14,9 @@ const NewExpense = (props) => {
   // ExpenseForm 에서 사용할 함수를 props로 넘김
 
   return (
-    <div className={style.new_expense}>
+    <StyledNewExpense>
       <ExpenseForm onSaveExpenseData={saveExpenseDateHandler} />
-    </div>
+    </StyledNewExpense>
   );
 };
 

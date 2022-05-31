@@ -1,6 +1,10 @@
 import React from 'react';
-import Card from '../../UI/Card';
-import style from './ExpenseDate.module.css';
+import {
+  StyledYearText,
+  StyledCardDetail,
+  StyledMonthText,
+  StyledDayText,
+} from './styles';
 
 const ExpenseDate = (props) => {
   const year = props.date.getFullYear();
@@ -8,11 +12,11 @@ const ExpenseDate = (props) => {
   const day = props.date.toLocaleString('en-US', { day: 'numeric' });
 
   return (
-    <Card className={style.expense_date_box}>
-      <div className={style.expense_date_year}>{year}</div>
-      <div className={style.expense_date_month}>{month}</div>
-      <div className={style.expense_date_day}>{day}</div>
-    </Card>
+    <StyledCardDetail>
+      <StyledYearText>{year}</StyledYearText>
+      <StyledMonthText>{month}</StyledMonthText>
+      <StyledDayText>{day}</StyledDayText>
+    </StyledCardDetail>
   );
 };
 

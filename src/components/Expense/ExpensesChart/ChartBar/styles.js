@@ -1,11 +1,13 @@
-.chart_bar {
+import styled from 'styled-components';
+
+const StyledChartBar = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+`;
 
-.chart_bar__inner {
+const StyledChartInner = styled.div`
   height: 100%;
   width: 15px;
   border: 1px solid #ffffff9a;
@@ -15,19 +17,21 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
+`;
 
-.chart_bar__fill {
+const StyledChartBarFill = styled.div`
   background-color: #4b57ff;
   width: 100%;
   transition: all 0.3s ease-out;
   border-radius: 2px;
-}
+`;
 
-.chart_bar__label {
-  margin-top:10px;
+const StyledChartBarLabel = styled.div`
+  margin-top: 10px;
   font-weight: bold;
   font-size: 0.8rem;
   text-align: center;
-  color:azure
-}
+  color: azure;
+`;
+
+export { StyledChartBar, StyledChartInner, StyledChartBarFill, StyledChartBarLabel };
